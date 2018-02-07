@@ -3,9 +3,9 @@ package com.zz.baseapp.dagger.module;
 import android.content.Context;
 import android.util.Log;
 
+import com.zz.baseapp.api.CommonService;
 import com.zz.baseapp.api.HttpConfig;
 import com.zz.baseapp.base.MainApplication;
-import com.zz.baseapp.mode.CommonService;
 import com.zz.baseapp.mode.HttpHelp;
 
 import java.io.IOException;
@@ -28,11 +28,11 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  * Created by ZhangZhuo on 2018/1/23.
  */
 @Module
-public class Appmodule {
+public class AppModule {
     private static final long TIMEOUT = 20000;
     private final MainApplication application;
 
-    public Appmodule(MainApplication application) {
+    public AppModule(MainApplication application) {
         this.application = application;
     }
 

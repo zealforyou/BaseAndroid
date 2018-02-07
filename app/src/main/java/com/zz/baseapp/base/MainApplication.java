@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.zz.baseapp.dagger.AppComponent;
 import com.zz.baseapp.dagger.DaggerAppComponent;
-import com.zz.baseapp.dagger.module.Appmodule;
+import com.zz.baseapp.dagger.module.AppModule;
 
 /**
  * Created by ZhangZhuo on 2018/1/22.
@@ -30,7 +30,7 @@ public class MainApplication extends Application {
                 if (appComponent == null) {
                     appComponent = DaggerAppComponent
                             .builder()
-                            .appmodule(new Appmodule(this))
+                            .appModule(new AppModule(this))
                             .build();
                 }
             }

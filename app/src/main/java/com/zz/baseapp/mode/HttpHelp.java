@@ -1,8 +1,6 @@
 package com.zz.baseapp.mode;
 
-import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
+import com.zz.baseapp.api.CommonService;
 
 /**
  * Created by ZhangZhuo on 2018/1/23.
@@ -13,10 +11,5 @@ public class HttpHelp {
 
     public HttpHelp(CommonService commonService) {
         this.commonService = commonService;
-    }
-
-    public Observable<String> baidu() {
-        return commonService.baidu().subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread());
     }
 }
